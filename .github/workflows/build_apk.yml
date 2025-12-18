@@ -3,7 +3,7 @@ name: Build APK
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # 允许你手动点击按钮触发打包
+  workflow_dispatch:
 
 jobs:
   build:
@@ -39,7 +39,7 @@ jobs:
         flet build apk --verbose
 
     - name: Upload APK
-      uses: actions/upload-artifact@v4  # 这里必须是 v4
+      uses: actions/upload-artifact@v4
       with:
         name: pork-app-release
-        path: build/app/outputs/flutter-apk/app-release.apk
+        path: "**/*.apk"  # <--- 改成了这行，自动寻找所有 APK 文件
