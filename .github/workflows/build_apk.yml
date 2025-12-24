@@ -41,5 +41,5 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: pork-app-release
+        name: JYbill
         path: "**/*.apk"  # <--- 改成了这行，自动寻找所有 APK 文件
