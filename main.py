@@ -6,7 +6,7 @@ from datetime import datetime
 
 def main(page: ft.Page):
     # --- 0. 页面基础设置 ---
-    page.title = "系统记账本"
+    page.title = "易计记账本"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.padding = 0 
     page.resize_on_scroll = True 
@@ -74,7 +74,7 @@ def main(page: ft.Page):
     def export_click(e):
         try:
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            filename = f"猪肉账本_{timestamp}.csv"
+            filename = f"易计记账本_{timestamp}.csv"
             android_download_dir = "/storage/emulated/0/Download"
             if os.path.exists(android_download_dir):
                 save_path = os.path.join(android_download_dir, filename)
@@ -402,4 +402,5 @@ def main(page: ft.Page):
     load_data()
 
 ft.app(target=main)
+
 
