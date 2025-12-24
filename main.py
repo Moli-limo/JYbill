@@ -6,7 +6,7 @@ from datetime import datetime
 
 def main(page: ft.Page):
     # --- 0. 页面基础设置 ---
-    page.title = "猪肉记账系统"
+    page.title = "系统记账本"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.padding = 0 
     page.resize_on_scroll = True 
@@ -402,3 +402,4 @@ def main(page: ft.Page):
     load_data()
 
 ft.app(target=main)
+
