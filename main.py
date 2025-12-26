@@ -401,6 +401,7 @@ def main(page: ft.Page):
     page.add(safe_area_content)
     load_data()
 
-ft.app(target=main)
+ft.app(target=main,assets_dir="assets")
+
 
 
